@@ -1,0 +1,45 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.titulo{
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font: bold;
+    font-size:  50px;
+    background-color: rgb(70, 113, 255);
+    text-align: left;
+    height: 75px;
+}
+
+.slogan{
+    margin-top: 0px;
+    color:rgb(70, 113, 255);
+    text-align: left;
+}
+
+
+.carrito{
+    width: 30px;
+}
+
+.counter{
+    border-radius: bold;
+    margin-top: 300px;
+    width: fit-content;
+    color: rgb(70, 113, 255);
+    margin: auto;
+    padding: 0px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.conteoCarrito{
+    font-size: 20px;
+    color: darkblue;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    border: black 5px;
+}
