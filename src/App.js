@@ -4,6 +4,11 @@ import NavBar from './componentes/NavBar';
 import ItemListContainer from './componentes/ItemListContainer';
 import Index from './componentes/Index';
 import ItemCount from './componentes/ItemCount';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom'
 
 function App() {
   return (

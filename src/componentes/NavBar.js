@@ -6,11 +6,11 @@ const NavBar = () => {
     <div>
         <h1 className='titulo'>Viene°Usado</h1>
         <h2 className='slogan'>¿Te sobra...? Dale segunda vida...</h2>
-            <button src = "b-secondary">Home</button>
-            <button>Eventos</button>
-            <button>Categorías</button>
-            <button>Puntos de entrega</button>
-            <button>Usuario</button>
+            <button class="btn btn-primary" type="submit">Home</button>
+            <button class="btn btn-primary" type="submit">Eventos</button>
+            <button class="btn btn-primary" type="submit">Categorías</button>
+            <button class="btn btn-primary" type="submit">Puntos de entrega</button>
+            <button class="btn btn-primary" type="submit">Usuario</button>
             <img src="/imagenes/carrito.jpg" className='carrito' />
     </div>
   )
