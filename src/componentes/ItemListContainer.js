@@ -1,7 +1,7 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import './style.css'
 
-export const ItemListContainer = ({mensaje}) => {
+const ItemListContainer = ({mensaje}) => {
 
 
     /*
@@ -16,15 +16,20 @@ export const ItemListContainer = ({mensaje}) => {
     
     )
     */
+
+    const [categorias, setCategorias] = useState ([])
+            useEffect(() => {
+                console.log("cuadros")
+            }, ["Esculturas"])
+
+
+    
     
     return (
 
-        <div className='counter'>
-
+        <div className='categorias'>
             <h1>{mensaje}</h1>
-
         </div>
-
     )
 
 }

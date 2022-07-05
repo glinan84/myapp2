@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './componentes/NavBar';
@@ -17,7 +17,27 @@ function App() {
 
     </div>
   );
+
+const [users, setUsers] = useState ([
+  { id: 1, name: 'gerardo'},
+  { id: 2, name: 'antonio'},
+])
+
+return <ul>
+  {users.map(u => <li key={u.id}>{u.name}</li>)}
+</ul>
+
 }
 
+/*
+const cuadros = () => {
+  const [categorias,setCategorias] = useState([])
+  useEffect(() => {
+    consumeApiCategorias()
+  },[])
+
+
+}
+*/
 
 export default App;

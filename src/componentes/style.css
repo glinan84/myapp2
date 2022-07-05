@@ -8,15 +8,17 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font: bold;
     font-size:  50px;
-    background-color: rgb(70, 113, 255);
+    background-color: rgb(59, 108, 255);
     text-align: left;
     height: 75px;
 }
 
-.slogan{
-    margin-top: 0px;
-    color:rgb(70, 113, 255);
-    text-align: left;
+
+.navBar{
+    flex-direction: column;
+    font-size: larger;
+    width: 600px;
+    align-items: flex-end;
 }
 
 
@@ -28,7 +30,7 @@
     border-radius: bold;
     margin-top: 300px;
     width: fit-content;
-    color: rgb(70, 113, 255);
+    color: rgb(59, 108, 255);
     margin: auto;
     padding: 0px;
     text-align: center;
