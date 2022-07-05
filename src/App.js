@@ -1,14 +1,11 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './componentes/NavBar';
 import ItemListContainer from './componentes/ItemListContainer';
 import Index from './componentes/Index';
 import ItemCount from './componentes/ItemCount';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from 'react-router-dom'
+
 
 function App() {
   return (
