@@ -6,12 +6,20 @@ const ItemCount = ({stock, initial, contador}) => {
 
     const [count, setCount] = useState (1);
 
-
+/*  DETERMINACIÓN DE TIEMPO DE 2 SEGUNDOS = 2000 MILISEGUNDOS
     useEffect(() => {
       setTimeout(() => {
           console.log('cambio');
       }, 2000);
     }, [contador]);
+*/
+
+      useEffect(() => {
+        setInterval(() => {
+            console.log('cambioEjecutado');
+            /*console.log('./public/imagenes/478.gif')*/
+        }, 2000);
+      }, [contador]);
 
 
     
