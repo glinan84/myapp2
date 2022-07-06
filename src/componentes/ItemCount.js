@@ -2,17 +2,17 @@ import React, { useState, useEffect} from 'react'
 import './style.css'
 
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({stock, initial, contador}) => {
 
     const [count, setCount] = useState (1);
 
-/*
+
     useEffect(() => {
       setTimeout(() => {
           console.log('cambio');
-      }, timeout);
-    }, [contador,numero]);
-*/
+      }, 2000);
+    }, [contador]);
+
 
     
 
