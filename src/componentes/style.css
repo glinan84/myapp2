@@ -15,12 +15,16 @@
 
 
 .navBar{
-    flex-direction: column;
-    font-size: larger;
-    width: 600px;
-    align-items: flex-end;
+    font-size: smaller;
+    background-position: 20px;
+    justify-content: right;
+    padding-top: auto;
+    display: flex;
+    flex-direction: row;
+    flex: content;
+    list-style: none;
+    text-transform:lowercase;
 }
-
 
 .carrito{
     width: 30px;
