@@ -11,12 +11,12 @@ const Usuarios = () => {
         setUsuario(event.target.value);
     }
 
-    const manejarClick = () => {
+    const manejarClick = (event) => {
         /*usuarios.push(usuario);  esto no se debe hacer*/
         setUsuarios([...usuarios, usuario]); /*Esta línea sirve para guardar copia reales de usuarios, lo anterior no guarda*/
     }
 
-    const manejarBorrado = () => {
+    const manejarBorrado = (event) => {
         setUsuario([]);
     }  /*sirve para borrar listado de usuarios*/
 
