@@ -5,6 +5,7 @@ import NavBar from './componentes/NavBar';
 import ItemListContainer from './componentes/ItemListContainer';
 import Index from './componentes/Index';
 import ItemCount from './componentes/ItemCount';
+import Usuarios from './Usuarios';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     <NavBar />
     <ItemListContainer mensaje = "Contador de compra"/>
     <ItemCount stock = {10} initial = {1}/>
-
+    <Usuarios agregar = "text"/>
     </div>
   );
 
@@ -36,6 +37,30 @@ const cuadros = () => {
     consumeApiCategorias()
   },[])
 
+
+}
+*/
+
+
+/*  ejecución de "eventos y target"
+const App = () => {
+
+const manejarClick = (event) => {
+  console.log(event,target);
+  const button = document.getElementsById ('button');
+  console.log(button);
+}
+
+const manejarCambio = (event) => {
+  console.log(event,target);
+}
+
+return (
+  <div>
+    <button onClick={manejarClick}>Click</button>
+    <input type="text" onChange={manejarCambio}></input>
+  </div>
+)
 
 }
 */

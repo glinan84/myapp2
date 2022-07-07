@@ -59,3 +59,4 @@ const ItemCount = ({stock, initial, contador}) => {
 }
 
 export default ItemCount
+

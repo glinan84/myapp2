@@ -1,7 +1,6 @@
 import React from 'react'
 import './style.css'
 
-window.alert ("Bienvenido");
 
 const NavBar = () => {
   return (
