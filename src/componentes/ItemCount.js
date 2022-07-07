@@ -22,7 +22,10 @@ const ItemCount = ({stock, initial, contador}) => {
       }, [contador]);
 
 
-    
+
+
+
+/* ARRANQUE DEL CONTADOR DE CARRITO*/    
 
     const decrease = () => {
     

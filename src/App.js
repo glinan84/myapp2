@@ -9,6 +9,13 @@ import Usuarios from './Usuarios';
 
 
 function App() {
+
+  const [show, setShow] = useState(true);
+
+  const cambio = () => {
+    setShow(!show)
+  }
+
   return (
     <div className="App">
 
@@ -16,6 +23,7 @@ function App() {
     <ItemListContainer mensaje = "Contador de compra"/>
     <ItemCount stock = {10} initial = {1}/>
     <Usuarios agregar = "text"/>
+    <button onClick={cambio}></button>
     </div>
   );
 
