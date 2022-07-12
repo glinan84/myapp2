@@ -14,12 +14,26 @@ const ItemCount = ({stock, initial, contador}) => {
     }, [contador]);
 */
 
+
+
       useEffect(() => {
         setInterval(() => {
             console.log('cambioEjecutado');
             /*console.log('./public/imagenes/478.gif')*/
         }, 2000);
-      }, [contador]);
+      }, [contador])
+
+useEffect(() => {
+  const intervalo = setInterval(() => {
+    console.log('aviso 2');
+  }, 2000);
+
+  return () => {
+    console.log('clean');
+    clearInterval(intervalo);
+  }
+}, []);
+
 
 
 

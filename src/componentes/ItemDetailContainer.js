@@ -1,8 +1,12 @@
 import React from "react";
+import ItemDetail from "./ItemDetail";
+import './style.css'
 
 
 
 
 
 
-export default ItemDetailContainer
+
+
+export default ItemDetail

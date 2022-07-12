@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './componentes/NavBar';
 import ItemListContainer from './componentes/ItemListContainer';
-import Index from './componentes/Index';
 import ItemCount from './componentes/ItemCount';
+import ItemDetailContainer from './componentes/ItemDetailContainer';
 import Usuarios from './Usuarios';
 
 
@@ -27,16 +27,16 @@ function App() {
     </div>
   );
 
-const [users, setUsers] = useState ([
-  { id: 1, name: 'gerardo'},
-  { id: 2, name: 'antonio'},
-])
+      const [users, setUsers] = useState ([
+        { id: 1, name: 'gerardo'},
+        { id: 2, name: 'antonio'},
+      ])
 
-return <ul>
-  {users.map(u => <li key={u.id}>{u.name}</li>)}
-</ul>
+      return <ul>
+        {users.map(u => <li key={u.id}>{u.name}</li>)}
+      </ul>
 
-}
+      }
 
 /*
 const cuadros = () => {
