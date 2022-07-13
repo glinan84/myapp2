@@ -6,6 +6,7 @@ import ItemListContainer from './componentes/ItemListContainer';
 import ItemCount from './componentes/ItemCount';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 import Usuarios from './Usuarios';
+import ItemDetail from './componentes/ItemDetailContainer';
 
 
 function App() {
@@ -22,21 +23,26 @@ function App() {
     <NavBar />
     <ItemListContainer mensaje = "Contador de compra"/>
     <ItemCount stock = {10} initial = {1}/>
+
     <Usuarios agregar = "text"/>
     <button onClick={cambio}></button>
     </div>
   );
 
-      const [users, setUsers] = useState ([
+
+
+    const [users, setUsers] = useEffect ([
+
         { id: 1, name: 'gerardo'},
         { id: 2, name: 'antonio'},
       ])
 
-      return <ul>
+      return (
+      <ul>
         {users.map(u => <li key={u.id}>{u.name}</li>)}
       </ul>
 
-      }
+      )}
 
 /*
 const cuadros = () => {

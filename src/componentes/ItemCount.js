@@ -23,10 +23,11 @@ const ItemCount = ({stock, initial, contador}) => {
         }, 2000);
       }, [contador])
 
-useEffect(() => {
-  const intervalo = setInterval(() => {
-    console.log('aviso 2');
-  }, 2000);
+      
+      useEffect(() => {
+        const intervalo = setInterval(() => {
+          console.log('aviso 2');
+        }, 2000);
 
   return () => {
     console.log('clean');

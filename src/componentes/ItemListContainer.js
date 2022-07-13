@@ -1,72 +1,68 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import ItemCount from './ItemCount';
 import './style.css'
+import { SpinnerDotted } from 'spinners-react';
 
 
 const initialProducts = [
-    {name: 'Cuadros', id:0, price:'$'+ 1 + ',000 USD', stock:2},
-    {name: 'Escultura', id:1, price:'$'+ 12 + ',500 USD', stock:1},
+    {name: 'Cuadro espacio', id:0, price:'$'+ 1 + ',000 USD', stock:2},
+    {name: 'Escultura acero', id:1, price:'$'+ 12 + ',500 USD', stock:1},
     {name: 'Pintura', id:2, price:'$'+ 3 + ',500 USD', stock:2},
-    {name: 'Artesanía', id:3, price:'$'+250 + ' USD', stock:5},
+    {name: 'Artesania clásica', id:3, price:'$'+250 + ' USD', stock:5},
 ]
 
 
+/* EN ESTAS LÍNEAS, POSTERIOR A LA 15, SE CORTÓ Y RESPALDÓ CÓDIGO DE PROMESA NÚMERO:120720221016PM (ESTÁ EN BLOCK DE NOTAS)*/
 
 const promesa = new Promise((res, rej) => {
-    res('Puede Continuar')
+    setTimeout(() => {
+        res(initialProducts);
+    }, 3000);
 });
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({ greeting }) => {
 
-    const [products] = useState ([]);
+    const [products , setProducts] = useState([]);
 
     useEffect(() => {
-        promesa.then((data) =>{
-            console.log('Todo bien');
+        promesa.then((data) => {
             console.log(data);
             setProducts(data);
         }).catch(() => {
-            console.log('Cuidado')
-        })
-    }, []);
-
-
-const promesa = new Promise ((res, rej) => {
-        setTimeout(() => {
-            res(initialProducts);
-        }, 3000);
-    })
+            console.log('error en sistema');
+        }).finally(() => {})
+    
+}, []);}
 
 
 const onAdd = (count) => {
-    console.log('Quiero agregar' + count + 'piezas de este producto')
+    console.log('Deseo agregar' + count + 'estas piezas')
 }
+
+
+
 
 return (
     <>
+        <h1 style={styles.container}>{}</h1>
         <ItemCount initial={1} stock={10} onAdd={onAdd} />
-        {products.map((product) => <div key={product.id}>{product.name}</div>)}
+        {products.map((product) => <div key={product.id}>{product.name, product.price}</div>)}
     </>
 )
 
 
-    const [productos, setProducts] = useState ([])
-            useEffect(() => {
-                console.log("cuadros")
-            }, ["Esculturas"])
-
-
-    
-/*  
-    return (
-
-        <div className='categorias'>
-            <h1>{greeting}</h1>
-        </div>
-    )
-*/
-}
-
 
 
 export default ItemListContainer
+
+
+const styles = {
+    container: {
+        display: 'grid',
+        font: 'bold',
+        justifyContent: 'space.between',
+        alignItems: 'center',
+        paddingLeft: '50',
+        paddingRight: '50'
+    }
+}
