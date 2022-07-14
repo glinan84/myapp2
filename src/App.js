@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import NavBar from './componentes/NavBar';
-import ItemListContainer from './componentes/ItemListContainer';
-import ItemCount from './componentes/ItemCount';
-import ItemDetailContainer from './componentes/ItemDetailContainer';
+import NavBar from './Components/NavBar';
+import ItemListContainer from './Containers/ItemListContainer';
+import ItemCount from './Components/ItemCount';
+import ItemDetailContainer from './Containers/ItemDetailContainer';
 import Usuarios from './Usuarios';
-import ItemDetail from './componentes/ItemDetailContainer';
+import ItemDetail from './Containers/ItemDetailContainer';
 
 
 function App() {
@@ -23,7 +23,8 @@ function App() {
     <NavBar />
     <ItemListContainer mensaje = "Contador de compra"/>
     <ItemCount stock = {10} initial = {1}/>
-
+    <ItemDetailContainer mensaje = "Detalle del producto"/>
+    <ItemDetail />
     <Usuarios agregar = "text"/>
     <button onClick={cambio}></button>
     </div>

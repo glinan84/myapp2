@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import ItemCount from './ItemCount';
+import ItemCount from '../Components/ItemCount';
+import Products from '../Data/Products';
 import './style.css'
 import { SpinnerDotted } from 'spinners-react';
 
@@ -43,11 +44,11 @@ const onAdd = (count) => {
 
 
 return (
-    <>
+    <div>
         <h1 style={styles.container}>{}</h1>
         <ItemCount initial={1} stock={10} onAdd={onAdd} />
-        {products.map((product) => <div key={product.id}>{product.name, product.price}</div>)}
-    </>
+        {products.map((product) => <div key={product.id}>{product.name + product.price}</div>)}
+    </div>
 )
 
 
@@ -56,7 +57,7 @@ return (
 export default ItemListContainer
 
 
-const styles = {
+const styles={
     container: {
         display: 'grid',
         font: 'bold',
