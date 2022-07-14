@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ItemCount from '../Components/ItemCount';
 import Products from '../Data/Products';
-import './style.css'
+import '../Components/style.css'
 import { SpinnerDotted } from 'spinners-react';
 
 
@@ -23,7 +23,7 @@ const promesa = new Promise((res, rej) => {
 
 const ItemListContainer = ({ greeting }) => {
 
-    const [products , setProducts] = useState([]);
+    const [product , setProducts] = useState([]);
 
     useEffect(() => {
         promesa.then((data) => {
@@ -42,15 +42,15 @@ const onAdd = (count) => {
 
 
 
-
+/*
 return (
     <div>
         <h1 style={styles.container}>{}</h1>
         <ItemCount initial={1} stock={10} onAdd={onAdd} />
-        {products.map((product) => <div key={product.id}>{product.name + product.price}</div>)}
+        {product.map((product) => <div key={product.id}>{product.name + product.price}</div>)}
     </div>
 )
-
+*/
 
 
 

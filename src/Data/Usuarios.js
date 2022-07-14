@@ -1,6 +1,12 @@
 import React, { useState } from "react"
-import ListaUsuarios from "./ListaUsuarios";
+import ListaUsuarios from "../Containers/ListaUsuarios";
 
+const users = [
+    {nombre: 'gerardo', apellido: 'linan'},
+    {nombre: 'fernando', apellido: 'perez'},
+    {nombre: 'karina', apellido: 'ornelas'},
+    {nombre: 'humberto', apellido: 'concha'},
+]
 
 const Usuarios = () => {
 
@@ -24,7 +30,7 @@ const Usuarios = () => {
         <div>
             <input onChange={manejarCambio} type="text" />
             <button onClick={manejarClick}>Agregar</button>
-            <ListaUsuarios usuarios={usuarios} manejarBorrado={manejarBorrado}/>
+            <ListaUsuarios usuarios={usuarios} manejarBorrado='manejarBorrado'/>
         </div>
     )
 

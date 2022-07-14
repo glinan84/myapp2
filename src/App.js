@@ -5,7 +5,7 @@ import NavBar from './Components/NavBar';
 import ItemListContainer from './Containers/ItemListContainer';
 import ItemCount from './Components/ItemCount';
 import ItemDetailContainer from './Containers/ItemDetailContainer';
-import Usuarios from './Usuarios';
+import Usuarios from './Data/Usuarios';
 import ItemDetail from './Containers/ItemDetailContainer';
 
 
