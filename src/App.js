@@ -7,6 +7,7 @@ import ItemCount from './Components/ItemCount';
 import ItemDetailContainer from './Containers/ItemDetailContainer';
 import Usuarios from './Data/Usuarios';
 import ItemDetail from './Containers/ItemDetailContainer';
+import { BrowserRouter, Router } from 'react-router-dom';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         {users.map(u => <li key={u.id}>{u.name}</li>)}
       </ul>
 
+
       )}
 
 /*
@@ -57,26 +59,38 @@ const cuadros = () => {
 */
 
 
-/*  ejecución de "eventos y target"
-const App = () => {
+/*  ejecución de "eventos y target" */
 
 const manejarClick = (event) => {
-  console.log(event,target);
+  console.log(event);
   const button = document.getElementsById ('button');
   console.log(button);
 }
 
 const manejarCambio = (event) => {
-  console.log(event,target);
+  console.log(event);
 }
 
+/*
 return (
   <div>
     <button onClick={manejarClick}>Click</button>
     <input type="text" onChange={manejarCambio}></input>
   </div>
 )
+*/
 
+
+/* INTENTO DE GENERAR EL BROWSER ROUTER
+const App = () => {
+
+  return (
+      <BrowserRouter>
+        <CartCustomProvider propsComponentes={()=>}>
+        
+        </CartCustomProvider>
+      </BrowserRouter>
+  )
 }
 */
 

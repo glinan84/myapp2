@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import ItemCount from '../Components/ItemCount';
-import Products from '../Data/Products';
 import '../Components/style.css'
 import { SpinnerDotted } from 'spinners-react';
+import { useParams } from 'react-router-dom';
+
+
+export default ItemListContainer
 
 
 const initialProducts = [
@@ -23,8 +26,14 @@ const promesa = new Promise((res, rej) => {
 
 const ItemListContainer = ({ greeting }) => {
 
-    const [product , setProducts] = useState([]);
+    const {categoryName} = useParams();
 
+    const [product , setProducts] = useState([]);
+    const [loaded, setLoaded] = useState(true);
+
+
+
+/* EJERCICIO PREVIO A LA NUEVA MODIFICACIÓN DEL useEffect válido posterior a esete. Modificación 20.jul
     useEffect(() => {
         promesa.then((data) => {
             console.log(data);
@@ -33,7 +42,25 @@ const ItemListContainer = ({ greeting }) => {
             console.log('error en sistema');
         }).finally(() => {})
     
-}, []);}
+}, []);} */
+
+    useEffect(() => {
+        console.log(categoryName);
+        fetch('https//fakestoreapi.com/products')
+            .then(res => res.json())
+            .then(data => setProducts(data))
+            .catch(err => console.log(err))
+            .finally(() => setLoaded(false))
+    }, [categoryName]);
+
+    /*
+    return (
+        <>
+            <h1>{greeting}</h1>
+            {loaded ? <CircularProgress color="sucess" /> : <ItemList products={products} />}
+        </>
+    )
+    */
 
 
 const onAdd = (count) => {
@@ -42,7 +69,7 @@ const onAdd = (count) => {
 
 
 
-/*
+
 return (
     <div>
         <h1 style={styles.container}>{}</h1>
@@ -50,11 +77,9 @@ return (
         {product.map((product) => <div key={product.id}>{product.name + product.price}</div>)}
     </div>
 )
-*/
 
 
 
-export default ItemListContainer
 
 
 const styles={
@@ -66,4 +91,4 @@ const styles={
         paddingLeft: '50',
         paddingRight: '50'
     }
-}
+}}
