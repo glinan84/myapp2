@@ -16,7 +16,6 @@ const initialProducts = [
 ]
 
 
-/* EN ESTAS LÍNEAS, POSTERIOR A LA 15, SE CORTÓ Y RESPALDÓ CÓDIGO DE PROMESA NÚMERO:120720221016PM (ESTÁ EN BLOCK DE NOTAS)*/
 
 const promesa = new Promise((res, rej) => {
     setTimeout(() => {
@@ -33,16 +32,7 @@ const ItemListContainer = ({ greeting }) => {
 
 
 
-/* EJERCICIO PREVIO A LA NUEVA MODIFICACIÓN DEL useEffect válido posterior a esete. Modificación 20.jul
-    useEffect(() => {
-        promesa.then((data) => {
-            console.log(data);
-            setProducts(data);
-        }).catch(() => {
-            console.log('error en sistema');
-        }).finally(() => {})
-    
-}, []);} */
+
 
     useEffect(() => {
         console.log(categoryName);
@@ -53,14 +43,9 @@ const ItemListContainer = ({ greeting }) => {
             .finally(() => setLoaded(false))
     }, [categoryName]);
 
-    /*
-    return (
-        <>
-            <h1>{greeting}</h1>
-            {loaded ? <CircularProgress color="sucess" /> : <ItemList products={products} />}
-        </>
-    )
-    */
+    
+
+    
 
 
 const onAdd = (count) => {

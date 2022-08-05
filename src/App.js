@@ -47,19 +47,7 @@ function App() {
 
       )}
 
-/*
-const cuadros = () => {
-  const [categorias,setCategorias] = useState([])
-  useEffect(() => {
-    consumeApiCategorias()
-  },[])
 
-
-}
-*/
-
-
-/*  ejecución de "eventos y target" */
 
 const manejarClick = (event) => {
   console.log(event);
@@ -71,27 +59,6 @@ const manejarCambio = (event) => {
   console.log(event);
 }
 
-/*
-return (
-  <div>
-    <button onClick={manejarClick}>Click</button>
-    <input type="text" onChange={manejarCambio}></input>
-  </div>
-)
-*/
 
-
-/* INTENTO DE GENERAR EL BROWSER ROUTER
-const App = () => {
-
-  return (
-      <BrowserRouter>
-        <CartCustomProvider propsComponentes={()=>}>
-        
-        </CartCustomProvider>
-      </BrowserRouter>
-  )
-}
-*/
 
 export default App;

@@ -3,11 +3,7 @@ import '../Components/style.css'
 
 const ListaUsuarios= ({usuarios}) => {
 
-    /*
-    const manejarClick = () => {
-        manejarClick();
-    }
-    */
+
 
     const manejarBorrado = () => {
         manejarBorrado();
