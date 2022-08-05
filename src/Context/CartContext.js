@@ -9,7 +9,7 @@ const CartCustomerProvider = ({childer}) => {
     }
 
     const addProduct = (product) => {
-        ir(isInCart (product.id)){
+        if(isInCart (product.id)){
             const aux = [...products];
             const found = aux.find(p => p.id === product.id);
             found.qty += product.qty;
