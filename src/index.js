@@ -4,6 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+root.innerHTML = <h1>{}</h1>;
 root.render(
   <React.StrictMode>
     <App />
@@ -15,10 +16,11 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-
-const appDiv = document.getElementById('app');
+/*
+const appDiv = document.getElementById('App');
 appDiv.innerHTML = <h1>{}</h1>;
 appDiv.appendChild('h1');
+*/
 
 
 const arr = [
