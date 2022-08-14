@@ -16,9 +16,9 @@ root.render(
 reportWebVitals();
 
 
-const app = document.getElementById('app');
-app.innerHTML = <h1>{}</h1>;
-app.appendChild('h1');
+const appDiv = document.getElementById('app');
+appDiv.innerHTML = <h1>{}</h1>;
+appDiv.appendChild('h1');
 
 
 const arr = [

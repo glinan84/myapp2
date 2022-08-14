@@ -3,6 +3,8 @@ import ItemCount from '../Components/ItemCount';
 import '../Components/style.css'
 import { SpinnerDotted } from 'spinners-react';
 import { useParams } from 'react-router-dom';
+import { db } from '../Firebase/Firebase';
+import { getDocs, collection, query, where} from 'firebase/firestore'
 
 
 export default ItemListContainer
@@ -35,6 +37,8 @@ const ItemListContainer = ({ greeting }) => {
 
 
     useEffect(() => {
+        console.log (db);
+        
         console.log(categoryName);
         fetch('https//fakestoreapi.com/products')
             .then(res => res.json())
